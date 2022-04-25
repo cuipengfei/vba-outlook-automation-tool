@@ -1,0 +1,17 @@
+{
+  "name": "monitor-html-and-download-pdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "chrome-paths": "^1.0.1",
+    "edge-paths": "^2.2.1",
+    "puppeteer-core": "^13.6.0"
+  }
+}
