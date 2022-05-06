@@ -10,7 +10,7 @@ const monitoredFolder = "C:/Data/Archive/";
 const chromeProfilePath = "C:\\Users\\cpf\\AppData\\Local\\Google\\Chrome\\User Data";
 
 // 用来下载pdf的密码，需替换
-const pwd = '请替换此处的密码';
+const pwd = 'xxx';
 
 // Initialize watcher.
 const watcher = chokidar.watch(monitoredFolder, {

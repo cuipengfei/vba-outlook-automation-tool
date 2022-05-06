@@ -18,8 +18,8 @@ Public Sub SaveHuiDan1(item As Outlook.MailItem)
     
     For Each object_attachment In item.Attachments
         Dim filename As String
-        filename = saveFolder & "\" & Format(Now(), "yyyy-MM-dd-hh-mm-ss") & object_attachment.DisplayName
-        
+        filename = saveFolder & "\" & Format(Now(), "yyyy-MM-dd-hh-mm-ss-ms") & Rnd() & object_attachment.DisplayName
+                      
         Call SubClosingPopUp(2, "will save attached file to: " + filename, "debug")
         
         object_attachment.SaveAsFile filename
@@ -28,4 +28,3 @@ Public Sub SaveHuiDan1(item As Outlook.MailItem)
     Call SubClosingPopUp(2, "finished", "debug")
     
 End Sub
-
