@@ -47,7 +47,7 @@ watcher
 
             //load this page first, then the second time it maybe faster，since js files has been loaded once
             await page.goto("https://www.asiapacific.ecorrespondence.hsbc.com/hsbc/main.jsp");
-            await page.waitForSelector(".buttonInner");
+            await page.waitForSelector(".buttonInner", { timeout: 60000 });
             log("pre loaded page resources");
             await page.screenshot({ path: '1.png' });
 
@@ -64,7 +64,7 @@ watcher
             log("navigated to new page");
             await page.screenshot({ path: '3.png' });
 
-            await page.waitForSelector("#dijit_form_ValidationTextBox_0");
+            await page.waitForSelector("#dijit_form_ValidationTextBox_0", { timeout: 60000 });
             log("password input is displayed now");
             await page.screenshot({ path: '4.png' });
 
