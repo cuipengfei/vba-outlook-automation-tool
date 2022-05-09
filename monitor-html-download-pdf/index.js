@@ -15,13 +15,14 @@ const pdfFolder = "C:/Data/hsbc-pdf-files/";
 const chromeProfilePath = "C:\\Users\\cpf\\AppData\\Local\\Google\\Chrome\\User Data";
 
 // 用来下载pdf的密码，需替换
-const pwd = 'Kelvin9731';
+const pwd = 'xxx';
 
 // 页面跳转时 最多 等待的时长，单位毫秒。先设定为两分钟，如果还会超时，可适当增加。
 const waitTimeInMs = 120000;
 
-// 如果下载失败(例如，由于超时)，等待多久再次重试，单位毫秒
-const retryWaitTime = 10000;
+// 如果没有下载到pdf文件(例如，由于超时，或者密码错误)。等待多久再次重试，单位毫秒。先设置为10分钟。
+// 如果是由于密码错误而无法下载到pdf，反复重试将会导致锁定，建议这一项时间不要设置的太短。
+const retryWaitTime = 600000;
 
 // Initialize watcher.
 const watcher = chokidar.watch(monitoredFolder, {
