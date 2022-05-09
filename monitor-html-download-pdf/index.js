@@ -4,6 +4,10 @@ const chromePaths = require('chrome-paths');
 const PATH = require('path');
 const fs = require('fs')
 
+/* 
+运行前，请修改配置 ↓
+*/
+
 //监控这个文件夹内新出现的html文件（也就是从邮件中保存的附件），需要设置的和outlook中保存附件的文件夹一致
 const monitoredFolder = "C:/Data/Archive/";
 
@@ -23,6 +27,12 @@ const waitTimeInMs = 120000;
 // 如果没有下载到pdf文件(例如，由于超时，或者密码错误)。等待多久再次重试，单位毫秒。先设置为10分钟。
 // 如果是由于密码错误而无法下载到pdf，反复重试将会导致锁定，建议这一项时间不要设置的太短。
 const retryWaitTime = 600000;
+
+/* 
+运行前，请修改配置 ↑
+
+下面的代码不要改
+*/
 
 // Initialize watcher.
 const watcher = chokidar.watch(monitoredFolder, {
